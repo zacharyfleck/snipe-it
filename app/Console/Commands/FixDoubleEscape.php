@@ -52,7 +52,7 @@ class FixDoubleEscape extends Command
             \App\Models\Group::class => ['name'],
             \App\Models\Department::class => ['name'],
             \App\Models\Location::class => ['name'],
-            \App\Models\User::class => ['first_name', 'last_name'],
+            \App\Models\User::class => ['first_name', 'last_name', 'jobtitle'],
         ];
 
         $count = [];
