@@ -1,42 +1,43 @@
 <?php
 
-return array(
+return [
 
-    'does_not_exist' => 'Model does not exist.',
-    'assoc_users'	 => 'This model is currently associated with one or more assets and cannot be deleted. Please delete the assets, and then try deleting again. ',
-
-
-    'create' => array(
-        'error'   => 'Model was not created, please try again.',
-        'success' => 'Model created successfully.',
-        'duplicate_set' => 'An asset model with that name, manufacturer and model number already exists.',
-    ),
-
-    'update' => array(
-        'error'   => 'Model was not updated, please try again',
-        'success' => 'Model updated successfully.'
-    ),
-
-    'delete' => array(
-        'confirm'   => 'Are you sure you wish to delete this asset model?',
-        'error'   => 'There was an issue deleting the model. Please try again.',
-        'success' => 'The model was deleted successfully.'
-    ),
-
-    'restore' => array(
-        'error'   		=> 'Model was not restored, please try again',
-        'success' 		=> 'Model restored successfully.'
-    ),
-
-    'bulkedit' => array(
-        'error'   		=> 'No fields were changed, so nothing was updated.',
-        'success' 		=> 'Models updated.'
-    ),
-
-    'bulkdelete' => array(
-        'error'   		    => 'No models were selected, so nothing was deleted.',
-        'success' 		    => ':success_count model(s) deleted!',
-        'success_partial' 	=> ':success_count model(s) were deleted, however :fail_count were unable to be deleted because they still have assets associated with them.'
-    ),
-
-);
+    'update' => [
+        'error'                 => 'An error has occurred while updating. ',
+        'success'               => 'Settings updated successfully.',
+    ],
+    'backup' => [
+        'delete_confirm'        => 'Are you sure you would like to delete this backup file? This action cannot be undone. ',
+        'file_deleted'          => 'The backup file was successfully deleted. ',
+        'generated'             => 'A new backup file was successfully created.',
+        'file_not_found'        => 'That backup file could not be found on the server.',
+        'restore_warning'       => 'Yes, restore it. I acknowledge that this will overwrite any existing data currently in the database. This will also log out all of your existing users (including you).',
+        'restore_confirm'       => 'Are you sure you wish to restore your database from :filename?'
+    ],
+    'purge' => [
+        'error'     => 'An error has occurred while purging. ',
+        'validation_failed'     => 'Your purge confirmation is incorrect. Please type the word "DELETE" in the confirmation box.',
+        'success'               => 'Deleted records successfully purged.',
+    ],
+    'mail' => [
+        'sending' => 'Sending Test Email...',
+        'success' => 'Mail sent!',
+        'error' => 'Mail could not be sent.',
+        'additional' => 'No additional error message provided. Check your mail settings and your app log.'
+    ],
+    'ldap' => [
+        'testing' => 'Testing LDAP Connection, Binding & Query ...',
+        '500' => '500 Server Error. Please check your server logs for more information.',
+        'error' => 'Something went wrong :(',
+        'sync_success' => 'A sample of 10 users returned from the LDAP server based on your settings:',
+        'testing_authentication' => 'Testing LDAP Authentication...',
+        'authentication_success' => 'User authenticated against LDAP successfully!'
+    ],
+    'slack' => [
+        'sending' => 'Sending Slack test message...',
+        'success_pt1' => 'Success! Check the ',
+        'success_pt2' => ' channel for your test message, and be sure to click SAVE below to store your settings.',
+        '500' => '500 Server Error.',
+        'error' => 'Something went wrong.',
+    ]
+];
